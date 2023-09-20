@@ -1,4 +1,4 @@
-%ic {
+[class*=_icon-]:before {
   font-family: "icons";
   font-style: normal;
   font-weight: normal;
@@ -9,11 +9,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class*="_icon-"] {
-  &:before {
-    @extend %ic;
-    display: block;
-  }
+[class*=_icon-]:before {
+  display: block;
 }
 
 ._icon-nav-disc:before {
