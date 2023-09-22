@@ -1,1 +1,154 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+// Текст
+[class*="__text"] {
+  color: $textColor;
+}
+
+// Картка
+.item {
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  display: grid;
+  row-gap: rem(10);
+  align-items: start;
+  grid-template-columns: 1fr minmax(rem(130), percent(170, 730));
+  column-gap: rem(17);
+  padding: rem(17) rem(17) rem(17) rem(24);
+
+  @media (max-width: em(400)) {
+    padding: rem(10);
+  }
+
+  // .item__body
+  &__body {}
+
+  // .item__title
+  &__title {
+    font-weight: 500;
+    font-size: rem(17);
+    line-height: math.div(20, 17);
+
+    &:not(:last-child) {
+      margin-bottom: em(10);
+    }
+  }
+
+  // .item__link-title
+  &__link-title {}
+
+  // .item__text
+  &__text {
+    font-size: rem(14);
+    line-height: math.div(22, 14);
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  // .item__image-ibg
+  &__image-ibg {
+    min-height: rem(130);
+    padding: 0 0 percent(130, 170) 0;
+    border-radius: rem(4);
+    overflow: hidden;
+
+    @media (min-width:$mobile) {
+      grid-row: span 2;
+    }
+  }
+
+  // .item__footer
+  &__footer {
+    display: grid;
+    align-self: end;
+    grid-template-columns: minmax(rem(170), percent(225, 765)) 1fr;
+
+    @media (max-width:$mobile) {
+      grid-column: span 2;
+    }
+  }
+
+  // .item__info
+  &__info {}
+
+  // .item__actions
+  &__actions {}
+}
+
+.info-item {
+  padding: 0 rem(10) 0 0;
+  display: flex;
+  align-items: center;
+  column-gap: rem(20);
+  row-gap: rem(5);
+  color: rgba(7, 46, 75, 0.4);
+  font-size: rem(12);
+  line-height: math.div(15, 12);
+
+  // .info-item__category
+  &__category {
+    color: inherit;
+    position: relative;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:not(:last-child) {
+      &::before {
+        content: '';
+        width: rem(2);
+        height: rem(2);
+        border-radius: 50%;
+        background: #2F9FF8;
+        opacity: 0.4;
+        position: absolute;
+        top: 50%;
+        transform: translate(50%, -50%);
+        right: rem(-10);
+      }
+    }
+  }
+
+  // .info-item__time
+  &__time {}
+}
+
+.actions-item {
+  display: flex;
+  column-gap: rem(25);
+  row-gap: rem(5);
+  flex-wrap: wrap;
+
+  // .actions-item__link
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(10);
+    row-gap: rem(5);
+    color: $linkColor;
+    font-size: rem(12);
+    line-height: math.div(15, 12);
+    transition: color 0.3s ease 0s;
+
+    &::before {
+      font-size: rem(16);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #1484e0;
+      }
+    }
+  }
+
+  @media (max-width:$mobile) {
+    column-gap: rem(15);
+  }
+}
