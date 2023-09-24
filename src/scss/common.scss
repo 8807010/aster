@@ -176,3 +176,20 @@
     column-gap: toRem(15);
   }
 }
+
+// Заголовок з іконкою
+.icon-title {
+  font-size: rem(15);
+  display: inline-flex;
+  align-items: center;
+  line-height: math.div(18, 15);
+
+  &_bold {
+    font-weight: 700;
+  }
+
+  &::before {
+    font-size: rem(22);
+    margin: 0px em(13, 22) 0px 0px;
+  }
+}
