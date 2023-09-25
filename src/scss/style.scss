@@ -124,9 +124,10 @@ body {
         @include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
         @include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
       }
-
-      @include adaptiveValue("padding", 34, 15);
     }
+
+    @include adaptiveValue("padding-left", 34, 15);
+    @include adaptiveValue("padding-right", 34, 15);
   }
 }
 
