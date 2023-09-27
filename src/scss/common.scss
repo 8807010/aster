@@ -15,6 +15,104 @@
 
 //========================================================================================================================================================
 
+// Загальна сітка
+.page {
+  padding: toRem(8) 0px 0px 0px;
+
+  // .page__container
+  &__container {
+    display: grid;
+    @include adaptiveValue("gap", 45, 10);
+    grid-template-columns: percent(226, 1372) 1fr percent(285, 1372);
+  }
+
+  // .page__left-side
+  &__left-side {
+    padding: 0px toRem(19) 0px 0px;
+  }
+
+  // .page__main
+  &__main {}
+
+  // .page__right-side
+  &__right-side {}
+}
+
+.left-side {
+
+  // .left-side__menu
+  &__menu {}
+
+  &__premium {
+    margin-left: toRem(-19);
+  }
+}
+
+.right-side {}
+
+// Меню
+.menu {
+
+  // .menu__icon
+  &__icon {}
+
+  // .menu__body
+  &__body {}
+
+  // .menu__list
+  &__list {}
+
+  // .menu__item
+  &__item {}
+
+  // .menu__link
+  &__link {}
+}
+
+.icon-menu {}
+
+// Віджет "преміум"
+.premium {
+  padding: toRem(20);
+  background-color: #2F9FF8;
+  border-radius: toRem(4);
+  color: #fff;
+
+  // .premium__title
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: toRem(11);
+    }
+  }
+
+  // .premium__body
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: toRem(20);
+    row-gap: toRem(10);
+  }
+
+  // .premium__price
+  &__price {
+    padding: 0px toRem(22) 0px 0px;
+    font-size: toRem(30);
+    font-weight: 700;
+
+    small {
+      font-weight: 400;
+      font-size: toRem(15);
+    }
+  }
+
+  &__button {
+    flex: 1 1 auto;
+  }
+}
+
+//========================================================================================================================================================
+
 // Картка
 .item {
   background-color: #FFFFFF;

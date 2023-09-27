@@ -8,9 +8,37 @@
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="page">
+      <div class="page__container">
+        <aside class="page__left-side left-side">
+          <div class="left-side__menu menu">
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item"><a href="" class="menu__link"></a></li>
+              </ul>
+            </nav>
+          </div>
+          <section class="left-side__premium premium">
+            <h4 class="premium__title _icon-gift icon-title icon-title_white">Subscribe to Premium</h4>
+            <div class="premium__body">
+              <div class="premium__price">
+                $8<small>/m</small>
+              </div>
+              <button type="button" class="premium__button button button_dark">Upgrade</button>
+            </div>
+          </section>
+        </aside>
+        <div class="page__main">
+          <div class="home">
+
+          </div>
+        </div>
+        <aside class="page__right-side right-side"></aside>
+      </div>
     </main>
     @@include('html/_footer.htm',{})
   </div>
+  @@include('html/_popup.htm',{})
   @@include('html/_js.htm',{})
 </body>
 
