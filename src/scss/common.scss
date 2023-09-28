@@ -17,7 +17,8 @@
 
 // Загальна сітка
 .page {
-  padding: toRem(8) 0px 0px 0px;
+  padding-top: toRem(8);
+  @include adaptiveValue("padding-bottom", 80, 30);
 
   // .page__container
   &__container {
@@ -28,27 +29,39 @@
 
   // .page__left-side
   &__left-side {
-    padding: 0px toRem(19) 0px 0px;
+    padding: 0px toRem(19) toRem(19) 0px;
   }
 
   // .page__main
-  &__main {}
+  &__main {
+    min-width: 0;
+  }
 
   // .page__right-side
-  &__right-side {}
+  &__right-side {
+    min-width: 0;
+  }
 }
 
+//========================================================================================================================================================
 .left-side {
 
   // .left-side__menu
-  &__menu {}
+  &__menu {
+    &:not(:last-child) {
+      margin-bottom: toRem(107);
+    }
+  }
 
   &__premium {
     margin-left: toRem(-19);
   }
 }
 
+
 .right-side {}
+
+//========================================================================================================================================================
 
 // Меню
 .menu {
@@ -60,13 +73,86 @@
   &__body {}
 
   // .menu__list
-  &__list {}
+  &__list {
+    &_border {
+      margin: toRem(21) 0;
+      padding: toRem(5) 0;
+      border-bottom: 1px solid rgba(7, 46, 75, 0.6);
+      border-top: 1px solid rgba(7, 46, 75, 0.6);
+    }
+  }
 
   // .menu__item
-  &__item {}
+  &__item {
+    position: relative;
+
+    &_active {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 200%;
+        background: rgba(47, 159, 248, 0.1);
+        border-radius: 0px toRem(37) toRem(37) 0px;
+      }
+
+      .menu__link {
+        color: #2f9ff8;
+        font-weight: 700;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: toRem(3);
+    }
+  }
 
   // .menu__link
-  &__link {}
+  &__link {
+    min-height: toRem(50);
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: toRem(15);
+    line-height: math.div(18, 15);
+    transition: all 0.3s ease 0s;
+    padding: toRem(5) toRem(20) toRem(5) 0;
+
+    &::before {
+      flex: 0 0 toRem(24);
+      width: toRem(24);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: toRem(22);
+      margin: 0px toRem(22) 0px 0px;
+    }
+
+    &::after {
+      content: "";
+      opacity: 0;
+      width: toRem(6);
+      height: toRem(6);
+      position: absolute;
+      border-radius: 50%;
+      @include adaptiveValue("left", -17.5, -7);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #2f9ff8;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #2f9ff8;
+      }
+    }
+  }
 }
 
 .icon-menu {}
