@@ -104,3 +104,7 @@
 ._icon-user-arrow:before {
   content: "\e916";
 }
+
+._icon-dotts:before {
+  content: "\e917";
+}

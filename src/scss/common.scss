@@ -29,6 +29,7 @@
 
   // .page__left-side
   &__left-side {
+    min-width: 0;
     padding: 0px toRem(19) toRem(19) 0px;
   }
 
@@ -213,6 +214,14 @@
 
   @media (max-width: em(400)) {
     padding: toRem(10);
+  }
+
+  &_big {
+    .item__footer {
+      @media (min-width: em(1465)) {
+        grid-column: span 1;
+      }
+    }
   }
 
   // .item_noimage
