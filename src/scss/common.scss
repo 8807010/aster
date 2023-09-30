@@ -202,7 +202,7 @@
 
 // Картка
 .item {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
   display: grid;
@@ -229,7 +229,7 @@
     grid-template-columns: 1fr;
   }
 
-  @media (max-width:em(380)) {
+  @media (max-width: em(380)) {
     grid-template-columns: 1fr;
   }
 
@@ -275,7 +275,7 @@
     overflow: hidden;
     display: inline-block;
 
-    @media (min-width:$mobile) {
+    @media (min-width: $mobile) {
       grid-row: span 2;
     }
   }
@@ -285,12 +285,9 @@
     display: grid;
     align-self: end;
     row-gap: toRem(8);
+    grid-column: span 2;
 
-    @media (max-width:$mobile) and (min-width:em(380)) {
-      grid-column: span 2;
-    }
-
-    @media (min-width:em(380)) {
+    @media (min-width: em(380)) {
       grid-template-columns: minmax(toRem(170), percent(217, 540)) 1fr;
     }
   }
@@ -325,11 +322,11 @@
 
     &:not(:last-child) {
       &::before {
-        content: '';
+        content: "";
         width: toRem(2);
         height: toRem(2);
         border-radius: 50%;
-        background: #2F9FF8;
+        background: #2f9ff8;
         opacity: 0.4;
         position: absolute;
         top: 50%;
@@ -371,7 +368,7 @@
     }
   }
 
-  @media (max-width:$mobile) {
+  @media (max-width: $mobile) {
     column-gap: toRem(15);
   }
 }
