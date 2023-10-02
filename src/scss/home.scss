@@ -5,6 +5,13 @@
       margin-bottom: toRem(40);
     }
   }
+
+  // .home__creators
+  &__creators {
+    &:not(:last-child) {
+      margin-bottom: toRem(32);
+    }
+  }
 }
 
 //====================================================================================================
@@ -95,4 +102,109 @@
       }
     }
   }
+}
+
+//========================================================================================================================================================
+.creators-module {
+
+  // .creators-module__header
+  &__header {
+    display: grid;
+    gap: toRem(15);
+    grid-template-columns: 1fr auto;
+  }
+
+  // .creators-module__title
+  &__title {}
+
+  // .creators-module__arrows
+  &__arrows {
+    display: flex;
+    align-items: center;
+    gap: toRem(20);
+  }
+
+  // .creators-module__arrow
+  &__arrow {
+    transition: color 0.3s ease 0s;
+
+    // .creators-module__arrow_left
+    &_left {
+      transform: rotate(-180deg);
+    }
+
+    // .creators-module__arrow_right
+    &_right {}
+
+    &.swiper-button-disabled {
+      opacity: 0.2;
+      cursor: default;
+    }
+  }
+
+  // .creators-module__slider
+  &__slider {
+    margin: 0px toRem(-12);
+    padding: toRem(12);
+  }
+
+  // .creators-module__wrapper
+  &__wrapper {}
+
+  // .creators-module__slide
+  &__slide {}
+}
+
+.slide-creator {
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0px toRem(2) toRem(12) rgba(0, 0, 0, 0.04);
+  border-radius: toRem(4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: toRem(13);
+  text-align: center;
+
+  &__body {
+    flex: 1 1 auto;
+
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+  }
+
+  // .slide-creator__avatar-ibg
+  &__avatar-ibg {
+    display: inline-block;
+    width: toRem(70);
+    height: toRem(70);
+    border-radius: 50%;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+  }
+
+  // .slide-creator__title
+  &__title {
+    font-size: toRem(14);
+    font-weight: 500;
+    line-height: math.div(18, 14);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(5);
+    }
+  }
+
+  // .slide-creator__position
+  &__position {
+    font-size: toRem(12);
+    line-height: math.div(14, 12);
+    color: $textColor;
+  }
+
+  // .slide-creator__link
+  &__link {}
 }
