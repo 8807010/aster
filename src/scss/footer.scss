@@ -1,3 +1,48 @@
 //====================================================================================================
+.footer {
+
+  // .footer__container
+  &__container {
+    display: grid;
+    @include adaptiveValue("gap", 45, 10);
+    grid-template-columns: percent(226, 1372) 1fr percent(285, 1372);
+
+    &::before,
+    &::after {
+      content: "";
+    }
+  }
+
+  // .footer__body
+  &__body {
+    border-top: 0.1px solid rgba(7, 46, 75, 0.4);
+    padding: toRem(23) 0;
+    font-size: toRem(12);
+    line-height: math.div(22, 12);
+    display: flex;
+    justify-content: space-between;
+    color: rgba(7, 46, 75, 0.4);
+  }
+
+  // .footer__copy
+  &__copy {}
+
+  // .footer__menu
+  &__menu {}
+}
+
+.menu-footer {
+  display: flex;
+  gap: toRem(38);
+
+  // .menu-footer__link
+  &__link {
+    @media (any-hover: hover) {
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+}
 
 //====================================================================================================
