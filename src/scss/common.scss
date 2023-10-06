@@ -389,3 +389,114 @@
     margin: 0px em(13, 22) 0px 0px;
   }
 }
+
+
+//========================================================================================================================================================
+.right-side {
+  display: grid;
+  gap: toRem(15);
+  align-content: start;
+  padding-top: toRem(61);
+
+  &__module {
+    background-color: #fff;
+    box-shadow: 0px toRem(2) toRem(20) rgba(0, 0, 0, 0.04);
+    border-radius: toRem(4);
+    padding: toRem(15);
+    min-width: 0;
+  }
+}
+
+//========================================================================================================================================================
+.weather-module {
+  display: grid;
+  gap: toRem(15);
+
+  // .weather-module__title
+  &__title {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-size: toRem(15);
+    line-height: math.div(18, 15);
+    border-bottom: 0.2px solid rgba(7, 46, 75, 0.4);
+    padding-bottom: toRem(9);
+  }
+
+  // .weather-module__body
+  &__body {}
+
+  // .weather-module__footer
+  &__footer {
+    display: flex;
+    gap: toRem(23);
+  }
+
+  // .weather-module__type
+  &__type {
+    font-size: toRem(12);
+    line-height: math.div(14, 12);
+    color: $textColor;
+
+    // .weather-module__type_active
+    &_active {
+      color: $mainColor;
+    }
+  }
+}
+
+.body-weather-module {
+  display: flex;
+
+  // .body-weather-module__info
+  &__info {
+    flex: 1 1 auto;
+  }
+
+  // .body-weather-module__status
+  &__status {
+    font-size: toRem(15);
+    line-height: math.div(18, 15);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(7);
+    }
+  }
+
+  // .body-weather-module__value
+  &__value {
+    font-weight: 700;
+    font-size: toRem(26);
+    line-height: math.div(30, 26);
+
+    sup {
+      font-size: toRem(12);
+    }
+  }
+
+  // .body-weather-module__icon
+  &__icon {}
+}
+
+//========================================================================================================================================================
+
+.story-writer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: toRem(9);
+
+  // .story-writer__title
+  &__title {
+    grid-column: span 2;
+  }
+
+  // .story-writer__info
+  &__info {
+    color: $textColor;
+    font-size: toRem(12);
+    line-height: math.div(18, 12);
+  }
+
+  // .story-writer__button
+  &__button {}
+}
