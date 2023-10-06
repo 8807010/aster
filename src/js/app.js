@@ -11,6 +11,10 @@
 слід його розкоментувати
 */
 
+// Функционал липкого блока
+flsScroll.stickyBlock();
+
+
 // Увімкнути/вимкнути FLS (Full Logging System) (в роботі)
 window['FLS'] = true;
 
@@ -174,7 +178,7 @@ import "./files/sliders.js";
 Документація плагіна: https://github.com/Grsmto/simplebar/tree/master/packages/simplebar
 Сніппет(HTML): 
 */
-// import './files/scroll/simplebar.js';
+import './files/scroll/simplebar.js';
 
 // Ліниве (відкладене) завантаження картинок
 // Документація по роботі у шаблоні: https://template.fls.guru/template-docs/modul-lenivaya-podgruzka-lazy-loading.html
