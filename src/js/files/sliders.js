@@ -8,7 +8,8 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';/*
+import { Navigation, Pagination } from 'swiper/modules';
+/*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
 EffectFade, Lazy, Manipulation

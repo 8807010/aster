@@ -1,6 +1,5 @@
-// Заголовки, загальні БЕМ блоки та інше...
+// Заголовки, общие БЄМ блоки и проче...
 
-//========================================================================================================================================================
 // Текст
 [class*="__text"] {
   color: $textColor;
@@ -54,13 +53,10 @@
     }
   }
 
-  &__premium {
+  &__ptoRemium {
     margin-left: toRem(-19);
   }
 }
-
-
-.right-side {}
 
 //========================================================================================================================================================
 
@@ -159,20 +155,20 @@
 .icon-menu {}
 
 // Віджет "преміум"
-.premium {
+.ptoRemium {
   padding: toRem(20);
-  background-color: #2F9FF8;
+  background-color: #2f9ff8;
   border-radius: toRem(4);
   color: #fff;
 
-  // .premium__title
+  // .ptoRemium__title
   &__title {
     &:not(:last-child) {
       margin-bottom: toRem(11);
     }
   }
 
-  // .premium__body
+  // .ptoRemium__body
   &__body {
     display: flex;
     flex-wrap: wrap;
@@ -181,7 +177,7 @@
     row-gap: toRem(10);
   }
 
-  // .premium__price
+  // .ptoRemium__price
   &__price {
     padding: 0px toRem(22) 0px 0px;
     font-size: toRem(30);
@@ -390,7 +386,6 @@
   }
 }
 
-
 //========================================================================================================================================================
 .right-side {
   display: grid;
@@ -498,5 +493,159 @@
   }
 
   // .story-writer__button
+  &__button {}
+}
+
+//========================================================================================================================================================
+
+.quick-bytes {
+
+  // .quick-bytes__header
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    font-size: toRem(15);
+    line-height: math.div(18, 15);
+    border-bottom: 0.2px solid rgba(7, 46, 75, 0.4);
+    padding-bottom: toRem(9);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(13);
+    }
+  }
+
+  // .quick-bytes__title
+  &__title {}
+
+  // .quick-bytes__arrows
+  &__arrows {
+    display: flex;
+    gap: toRem(10);
+  }
+
+  // .quick-bytes__arrow
+  &__arrow {
+    background: #2f9ff8;
+    flex: 0 0 24px;
+    height: toRem(24);
+    width: toRem(24);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    &::before {
+      font-size: toRem(10);
+      transform: translate(toRem(1), 0px);
+    }
+
+    // .quick-bytes__arrow_left
+    &_left {
+      transform: rotate(-180deg);
+    }
+
+    // .quick-bytes__arrow_right
+    &_right {}
+
+    &.swiper-button-disabled {
+      opacity: 0.2;
+      cursor: default;
+    }
+  }
+
+  // .quick-bytes__slider
+  &__slider {}
+
+  // .quick-bytes__wrapper
+  &__wrapper {}
+
+  // .quick-bytes__slide
+  &__slide {
+    font-size: toRem(12);
+    line-height: math.div(20, 12);
+    color: $textColor;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: toRem(15);
+      }
+    }
+  }
+
+  // .quick-bytes__dotts
+  &__dotts {
+    display: flex;
+    gap: toRem(8);
+    justify-content: center;
+    align-items: center;
+    min-height: toRem(4);
+    padding-top: toRem(15);
+
+    .swiper-pagination-bullet {
+      width: toRem(2);
+      height: toRem(2);
+      border-radius: 50%;
+      transition: all 0.3s ease 0s;
+      background: rgba(7, 46, 75, 0.2);
+    }
+
+    .swiper-pagination-bullet-active {
+      width: toRem(4);
+      height: toRem(4);
+      background: #2f9ff8;
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.subscribe-module {
+
+  // .subscribe-module__title
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: toRem(12);
+    }
+  }
+
+  // .subscribe-module__form
+  &__form {}
+
+  // .subscribe-module__line
+  &__line {
+    &:not(:last-child) {
+      margin-bottom: toRem(16);
+    }
+
+    .form__error {
+      font-size: toRem(10);
+      color: red;
+      margin-top: toRem(2);
+    }
+  }
+
+  // .subscribe-module__input
+  &__input {
+    background: #f4f9f8;
+    border: 1px solid rgba(7, 46, 75, 0.2);
+    box-sizing: border-box;
+    border-radius: toRem(4);
+    height: toRem(38);
+    padding: 0px toRem(14);
+    font-size: toRem(15);
+    width: 100%;
+    color: $textColor;
+
+    &:focus {
+      color: $mainColor;
+    }
+
+    &._form-error {
+      border: 1px solid red;
+    }
+  }
+
+  // .subscribe-module__button
   &__button {}
 }
