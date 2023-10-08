@@ -23,7 +23,11 @@
   &__container {
     display: grid;
     @include adaptiveValue("gap", 45, 10);
-    grid-template-columns: percent(226, 1372) 1fr percent(285, 1372);
+    grid-template-columns: minmax(toRem(226), percent(226, 1372)) 1fr percent(285, 1372);
+
+    @media (max-width: em(1439.98)) {
+      grid-template-columns: minmax(toRem(226), percent(226, 1372)) 1fr;
+    }
   }
 
   // .page__left-side
@@ -53,7 +57,7 @@
     }
   }
 
-  &__ptoRemium {
+  &__premium {
     margin-left: toRem(-19);
   }
 }
@@ -155,20 +159,20 @@
 .icon-menu {}
 
 // Віджет "преміум"
-.ptoRemium {
+.premium {
   padding: toRem(20);
   background-color: #2f9ff8;
   border-radius: toRem(4);
   color: #fff;
 
-  // .ptoRemium__title
+  // .premium__title
   &__title {
     &:not(:last-child) {
       margin-bottom: toRem(11);
     }
   }
 
-  // .ptoRemium__body
+  // .premium__body
   &__body {
     display: flex;
     flex-wrap: wrap;
@@ -177,7 +181,7 @@
     row-gap: toRem(10);
   }
 
-  // .ptoRemium__price
+  // .premium__price
   &__price {
     padding: 0px toRem(22) 0px 0px;
     font-size: toRem(30);
