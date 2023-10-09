@@ -58,7 +58,9 @@
   }
 
   &__premium {
-    margin-left: toRem(-19);
+    @media (min-width: $tablet) {
+      margin-left: toRem(-19);
+    }
   }
 }
 
@@ -395,7 +397,6 @@
   display: grid;
   gap: toRem(15);
   align-content: start;
-  padding-top: toRem(61);
 
   &__module {
     background-color: #fff;
@@ -403,6 +404,15 @@
     border-radius: toRem(4);
     padding: toRem(15);
     min-width: 0;
+  }
+
+  @media (min-width: em(1440)) {
+    padding-top: toRem(61);
+  }
+
+  @media (max-width: em(1439.98)) and (min-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 2 / 3;
   }
 }
 
@@ -481,6 +491,7 @@
 
 .story-writer {
   display: grid;
+  align-content: start;
   grid-template-columns: 1fr auto;
   gap: toRem(9);
 

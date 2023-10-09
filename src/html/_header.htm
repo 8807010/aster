@@ -3,9 +3,12 @@
     <a href="" class="header__logo"><span>Aster News</span></a>
     <div class="header__body body-header">
       <form action="#" class="body-header__search search">
-        <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Search for news.."
-          class="search__input input">
-        <button type="submit" class="search__button _icon-search"></button>
+        <div class="search__body">
+          <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Search for news.."
+            class="search__input input">
+          <button type="submit" class="search__button _icon-search"></button>
+          <button type="button" class="search__icon _icon-search"></button>
+        </div>
       </form>
       <a href="" class="body-header__latest latest-header">
         <div class="latest-header__value">Latest news on <span>Covid-19</span></div>
@@ -29,5 +32,6 @@
         </li>
       </ul>
     </div>
+    <button type="button" class="icon-menu"><span></span></button>
   </div>
 </header>

@@ -7,28 +7,31 @@
   // .header__container
   &__container {
     display: grid;
+    min-height: toRem(46);
     align-items: center;
-    @include adaptiveValue("gap", 45, 10);
+    @include adaptiveValue("gap", 45, 20);
     grid-template-columns: percent(226, 1372) 1fr percent(285, 1372);
 
-    @media (max-width:$tablet) {
-      grid-template-columns: auto 1fr auto;
+    @media (max-width: $tablet) {
+      grid-template-columns: auto 1fr auto auto;
     }
   }
 
   // .header__logo
   &__logo {
+    position: relative;
+    z-index: 5;
     justify-self: start;
     white-space: nowrap;
-    color: #0768B5;
+    color: #0768b5;
     font-weight: 700;
     font-size: toRem(18);
     line-height: toRem(35);
     padding: 0px 0px 0px toRem(44);
     min-width: toRem(29);
-    background: url('@img/logo.png') left / toRem(29) no-repeat;
+    background: url("@img/logo.png") left / toRem(29) no-repeat;
 
-    @media (max-width:$mobileSmall) {
+    @media (max-width: toRem(550)) {
       padding: 0;
       min-height: toRem(35);
 
@@ -64,13 +67,42 @@
 }
 
 .search {
-  background: rgba(47, 159, 248, 0.04);
-  border-radius: toRem(4);
   position: relative;
+  z-index: 5;
+  height: toRem(46);
+
+  &.search__open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 toRem(10);
+    z-index: 8;
+  }
+
+  // .search__body
+  &__body {
+    flex: 1 1 auto;
+    background: #ecf5f8;
+    height: toRem(46);
+    border-radius: toRem(4);
+    position: relative;
+
+    @media (max-width: em(429.98)) {
+      background: transparent;
+    }
+
+    .search__open & {
+      background: #ecf5f8;
+    }
+  }
 
   // .search__input
   &__input {
-    height: toRem(46);
+    height: 100%;
     background-color: transparent;
     width: 100%;
     padding: 0 toRem(46) 0 toRem(14);
@@ -80,10 +112,20 @@
     &:focus {
       color: rgba(7, 45, 75, 1);
     }
+
+    @media (max-width: em(429.98)) {
+      display: none;
+    }
+
+    .search__open & {
+      display: block;
+    }
   }
 
   // .search__button
+  &__icon,
   &__button {
+    display: none;
     width: toRem(46);
     height: toRem(46);
     position: absolute;
@@ -91,6 +133,26 @@
     right: 0;
     font-size: toRem(18);
     background-color: transparent;
+  }
+
+  &__button {
+    @media (min-width: em(430)) {
+      display: block;
+    }
+
+    .search__open & {
+      display: block;
+    }
+  }
+
+  &__icon {
+    @media (max-width: em(429.98)) {
+      display: block;
+    }
+
+    .search__open & {
+      display: none;
+    }
   }
 }
 
@@ -216,52 +278,58 @@
 //====================================================================================================
 
 //Burger
-/*
 .icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: toRem(30);
-		height: toRem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: toRem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - toRem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - toRem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - toRem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+    position: relative;
+    width: toRem(30);
+    height: toRem(18);
+    cursor: pointer;
+    z-index: 5;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: toRem(2);
+      background-color: #000;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      top: calc(50% - toRem(1));
+    }
+
+    .menu-open & {
+      span {
+        width: 0;
+      }
+
+      &::before,
+      &::after {}
+
+      &::before {
+        top: calc(50% - toRem(1));
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: calc(50% - toRem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
-*/
