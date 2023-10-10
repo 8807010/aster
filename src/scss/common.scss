@@ -28,12 +28,20 @@
     @media (max-width: em(1439.98)) {
       grid-template-columns: minmax(toRem(226), percent(226, 1372)) 1fr;
     }
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
   }
 
   // .page__left-side
   &__left-side {
     min-width: 0;
     padding: 0px toRem(19) toRem(19) 0px;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   // .page__main
@@ -156,12 +164,47 @@
       }
     }
   }
+
+  @media (max-width: $tablet) {
+    background: #f4f9f8;
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: all 0.3s ease 0s;
+    padding-top: toRem(80);
+    padding-bottom: toRem(10);
+    @include adaptiveValue("padding-left", 34, 15);
+    @include adaptiveValue("padding-right", 34, 15);
+
+    &::before {
+      content: "";
+      height: toRem(70);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: -100%;
+      transition: all 0.3s ease 0s;
+      z-index: 2;
+      background: #f4f9f8;
+
+      .menu-open & {
+        left: 0;
+      }
+    }
+
+    .menu-open & {
+      left: 0;
+    }
+  }
 }
 
 .icon-menu {}
 
 // Віджет "преміум"
-.premium {
+.pкemium {
   padding: toRem(20);
   background-color: #2f9ff8;
   border-radius: toRem(4);
