@@ -46,6 +46,8 @@
 
   // .header__user
   &__user {
+    position: relative;
+    z-index: 5;
     justify-self: end;
   }
 }
@@ -157,6 +159,8 @@
 }
 
 .latest-header {
+  position: relative;
+  z-index: 5;
   background: #F4F9F8;
   border: 0.2px solid #072D4B;
   border-radius: 4px;

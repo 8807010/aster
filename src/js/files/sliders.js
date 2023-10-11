@@ -82,12 +82,15 @@ function initSliders() {
 
       breakpoints: {
         320: {
-
+          slidesPerView: 1.1,
         },
-        768: {
-
+        450: {
+          slidesPerView: 2,
         },
-        992: {
+        520: {
+          slidesPerView: 3,
+        },
+        700: {
           slidesPerView: 4,
         },
         1100: {

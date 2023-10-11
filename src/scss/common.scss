@@ -37,7 +37,11 @@
   // .page__left-side
   &__left-side {
     min-width: 0;
-    padding: 0px toRem(19) toRem(19) 0px;
+    padding-bottom: toRem(19);
+
+    @media (min-width: em(1440)) {
+      padding-right: toRem(19);
+    }
 
     @media (max-width: $tablet) {
       display: none;
@@ -204,7 +208,7 @@
 .icon-menu {}
 
 // Віджет "преміум"
-.pкemium {
+.premium {
   padding: toRem(20);
   background-color: #2f9ff8;
   border-radius: toRem(4);
@@ -274,7 +278,7 @@
     grid-template-columns: 1fr;
   }
 
-  @media (max-width: em(380)) {
+  @media (max-width: em(379.98)) {
     grid-template-columns: 1fr;
   }
 
@@ -330,9 +334,9 @@
     display: grid;
     align-self: end;
     row-gap: toRem(8);
-    grid-column: span 2;
 
-    @media (min-width: em(380)) {
+    @media (min-width: em(379.98)) {
+      grid-column: span 2;
       grid-template-columns: minmax(toRem(170), percent(217, 540)) 1fr;
     }
   }

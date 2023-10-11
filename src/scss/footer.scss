@@ -5,11 +5,19 @@
   &__container {
     display: grid;
     @include adaptiveValue("gap", 45, 10);
-    grid-template-columns: percent(226, 1372) 1fr percent(285, 1372);
+    grid-template-columns: minmax(toRem(226), percent(226, 1372)) 1fr percent(285, 1372);
 
     &::before,
     &::after {
       content: "";
+    }
+
+    @media (max-width: em(1439.98)) {
+      grid-template-columns: minmax(toRem(226), percent(226, 1372)) 1fr;
+    }
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -22,6 +30,13 @@
     display: flex;
     justify-content: space-between;
     color: rgba(7, 46, 75, 0.4);
+
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: toRem(23) 0 toRem(15) 0;
+    }
   }
 
   // .footer__copy
