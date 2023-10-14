@@ -301,11 +301,100 @@
             </section>
           </div>
         </div>
+        <aside class="page__right-side right-side">
+          <section class="right-side__module weather-module">
+            <div class="weather-module__title _icon-crosshair">Coimbatore, Tamil Nadu</div>
+            <div class="weather-module__body body-weather-module">
+              <div class="body-weather-module__info">
+                <h4 class="body-weather-module__status">Sunny</h4>
+                <div class="body-weather-module__value">31<sup>o</sup>c</div>
+              </div>
+              <div class="body-weather-module__icon">
+                <img src="@img/wether/sun.svg" alt="sun">
+              </div>
+            </div>
+            <div class="weather-module__footer">
+              <button type="button" class="weather-module__type weather-module__type_active">Celsius</button>
+              <button type="button" class="weather-module__type">Fahrenheit</button>
+            </div>
+          </section>
+          <section class="right-side__module story-writer">
+            <h3 class="story-writer__title icon-title _icon-story">Become a Story Writer</h3>
+            <div class="story-writer__info">Contribute stories and start earning.</div>
+            <button type="button" class="story-writer__button button button_border">Know More</button>
+          </section>
+          <section class="right-side__module quick-bytes">
+            <div class="quick-bytes__header">
+              <h4 class="quick-bytes__title icon-title _icon-doc">Quick Bytes</h4>
+              <div class="quick-bytes__arrows">
+                <button type="button" class="quick-bytes__arrow quick-bytes__arrow_left _icon-slider-arrow"></button>
+                <button type="button" class="quick-bytes__arrow quick-bytes__arrow_right _icon-slider-arrow"></button>
+              </div>
+            </div>
+            <div class="quick-bytes__slider swiper">
+              <div class="quick-bytes__wrapper swiper-wrapper">
+                <div class="quick-bytes__slide swiper-slide">
+                  <p>The price of petrol remained unchanged on July 6 after reaching a new record high on the previous
+                    day, according to a price notification by state-owned fuel retailers. The diesel price remained
+                    stable for the second consecutive day.</p>
+                  <p>The increase on July 5, 35th in two months, took the petrol price in Delhi closer to Rs 100 per
+                    litre-mark. The petrol price in the national capital soared to Rs 99.9 a litre and diesel was priced
+                    at Rs 89.4 per litre, according to Bharat Petroleum's price listing.</p>
+                </div>
+                <div class="quick-bytes__slide swiper-slide">
+                  <p>The price of petrol remained unchanged on July 6 after reaching a new record high on the previous
+                    day, according to a price notification by state-owned fuel retailers. The diesel price remained
+                    stable for the second consecutive day.</p>
+                </div>
+                <div class="quick-bytes__slide swiper-slide">
+                  <p>The price of petrol remained unchanged on July 6 after reaching a new record high on the previous
+                    day, according to a price notification by state-owned fuel retailers. The diesel price remained
+                    stable for the second consecutive day.</p>
+                  <p>The increase on July 5, 35th in two months, took the petrol price in Delhi closer to Rs 100 per
+                    litre-mark. The petrol price in the national capital soared to Rs 99.9 a litre and diesel was priced
+                    at Rs 89.4 per litre, according to Bharat Petroleum's price listing.</p>
+                </div>
+                <div class="quick-bytes__slide swiper-slide">
+                  <p>The price of petrol remained unchanged on July 6 after reaching a new record high on the previous
+                    day, according to a price notification by state-owned fuel retailers. The diesel price remained
+                    stable for the second consecutive day.</p>
+                </div>
+              </div>
+              <div class="quick-bytes__dotts"></div>
+            </div>
+          </section>
+          <section class="right-side__module subscribe-module">
+            <h4 class="subscribe-module__title icon-title">Subscribe to our newsletter</h4>
+            <form action="#" class="subscribe-module__form">
+              <div class="subscribe-module__line">
+                <input autocomplete="off" type="text" name="form[]" data-error="Error (Enter Email)"
+                  data-required="email" placeholder="Enter Email" class="subscribe-module__input">
+              </div>
+              <button type="submit" class="subscribe-module__button button _fw">Subscribe</button>
+            </form>
+          </section>
+        </aside>
       </aside>
     </main>
     @@include('html/_footer.htm',{})
   </div>
-  @@include('html/_popup.htm',{})
+
+  <div data-spollers class="spollers">
+    <div class="spollers__item">
+      <button type="button" data-spoller class="spollers__title">Заголовок спойлера</button>
+      <div class="spollers__body">Контент спойлера</div>
+      <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus odio numquam officia repudiandae
+        voluptatum? Consequuntur reiciendis ullam iusto hic consequatur! Eaque odio neque eveniet quaerat inventore
+        impedit voluptas, aut eius, accusamus et, sunt molestias fugiat aspernatur mollitia officiis delectus rerum
+        saepe provident placeat hic sapiente consectetur facilis! Omnis impedit magni, inventore molestias aspernatur
+        quisquam mollitia maiores quam labore tempora quibusdam accusamus. Rem nemo necessitatibus nostrum laboriosam
+        ad, cupiditate iure, laborum quibusdam error molestias quisquam, distinctio adipisci pariatur ex ducimus autem.
+        Distinctio odit eius delectus libero, iusto aliquid recusandae. A quaerat perspiciatis id earum minus porro
+        ipsum, perferendis consequuntur necessitatibus totam?
+      </div>
+    </div>
+  </div>
   @@include('html/_js.htm',{})
 </body>
 
