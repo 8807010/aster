@@ -711,3 +711,125 @@
   // .subscribe-module__button
   &__button {}
 }
+
+//========================================================================================================================================================
+.news-module {
+  &_home {
+    display: grid;
+    justify-items: center;
+    gap: toRem(44);
+  }
+
+  // .news-module__title
+  &__title {
+    font-weight: 700;
+    font-size: toRem(15);
+    line-height: math.div(15, 18);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(14);
+    }
+  }
+
+  // .news-module__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("gap", 16, 10);
+
+    @media (max-width: em(1099.98)) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .news-module__item
+  &__item {}
+}
+
+//========================================================================================================================================================
+
+.subscribe-news {
+  background: #ffe8c5;
+  border-radius: toRem(4);
+  padding: toRem(15) toRem(25);
+  display: flex;
+  align-items: center;
+
+  // .subscribe-news__content
+  &__content {
+    flex: 1 1 auto;
+    padding-top: toRem(20);
+
+    @media (min-width: em(650)) {
+      padding-right: toRem(20);
+    }
+  }
+
+  // .subscribe-news__title
+  &__title {
+    font-weight: 700;
+    font-size: toRem(15);
+    line-height: math.div(18, 15);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(13);
+    }
+  }
+
+  // .subscribe-news__form
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: toRem(20);
+    position: relative;
+
+    .form__error {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      flex: 1 1 100%;
+      margin-top: toRem(5);
+      font-size: toRem(12);
+      color: red;
+    }
+  }
+
+  // .subscribe-news__input
+  &__input {
+    background: #fff5e6;
+    border-radius: toRem(4);
+    height: toRem(38);
+    padding: 0 toRem(13);
+    flex: 0 0 60%;
+    color: rgba(7, 46, 75, 0.3);
+
+    &:focus {
+      color: $mainColor;
+    }
+
+    @media (max-width: em(650)) {
+      flex: 1 1 auto;
+    }
+
+    @media (max-width: $mobileSmall) {
+      flex: 1 1 100%;
+    }
+  }
+
+  // .subscribe-news__button
+  &__button {
+    margin-left: toRem(13);
+
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+      margin: toRem(13) toRem(0) toRem(0) toRem(0);
+    }
+  }
+
+  // .subscribe-news__image
+  &__image {
+    @media (max-width: em(650)) {
+      display: none;
+    }
+  }
+}
