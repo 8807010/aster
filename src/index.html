@@ -1,182 +1,488 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Верстка «NEW_PROJECT_NAME»</title>
-</head>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
 
 <body>
-  <div class="rootpage">
-    <h1>Верстка «NEW_PROJECT_NAME»</h1>
-    <div class="rootpage__info">
-      Опис проєкту
-    </div>
-    <h2>Готові сторінки:</h2>
-    <ol class="rootpage__list">
-      <li><a target="_blank" href="home.html">Головна</a></li>
-      <li><a target="_blank" href="news-page.html">Сторінка новини</a></li>
-      <li><a target="_blank" href="common.html">Загальні блоки</a></li>
-    </ol>
-    <h2>Попапи:</h2>
-    <ol class="rootpage__list">
-      <li><a target="_blank" href="home.html#"></a></li>
-    </ol>
-    <div class="rootpage__tnx">
-      <h2>Дякую за замовлення!</h2>
-      <p>Буду радий (да) гарному відгуку.</p>
-      <p>Звертайтесь ще!</p>
-    </div>
-    <div class="rootpage__contacts">
-      <h2>Мої контакти:</h2>
-      <p>Пошта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-      <p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-      <p>Соц. мережі: <a href="">посилання</a></p>
-    </div>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <aside class="page__container">
+        <aside data-sticky-top="20" data-sticky class="page__left-side left-side">
+          <div data-sticky-item class="left-side__content">
+            <div data-da=".header__container,992" class="left-side__menu menu">
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item menu__item_active"><a href="" class="menu__link _icon-nav-top">Top Stories</a>
+                  </li>
+                  <li class="menu__item"><a href="" class="menu__link _icon-nav-world">Around the World</a></li>
+                  <li class="menu__item"><a href="" class="menu__link _icon-nav-business">Business</a></li>
+                  <li class="menu__item"><a href="" class="menu__link _icon-nav-health">Health</a></li>
+                </ul>
+                <ul class="menu__list menu__list_border">
+                  <li class="menu__item"><a href="" class="menu__link _icon-nav-covid">Covid 19</a></li>
+                </ul>
+                <ul class="menu__list">
+                  <li class="menu__item"><a href="" class="menu__link _icon-nav-play">Entertainment</a></li>
+                  <li class="menu__item"><a href="" class="menu__link _icon-nav-sports">Sports</a></li>
+                  <li class="menu__item"><a href="" class="menu__link _icon-nav-disc">Discussion</a></li>
+                  <li class="menu__item"><a href="" class="menu__link _icon-nav-notifi">Notification</a></li>
+                  <li class="menu__item"><a href="" class="menu__link _icon-nav-settings">News Feed Settings</a></li>
+                </ul>
+              </nav>
+            </div>
+            <section data-da=".page__main,992" class="left-side__premium premium">
+              <h4 class="premium__title _icon-gift icon-title icon-title_white">Subscribe to Premium</h4>
+              <div class="premium__body">
+                <div class="premium__price">
+                  $8<small>/m</small>
+                </div>
+                <button type="button" class="premium__button button button_dark">Upgrade</button>
+              </div>
+            </section>
+          </div>
+        </aside>
+        <div class="page__main">
+          <div class="home">
+            <section class="home__stories stories-module">
+              <h1 class="stories-module__title">Top Stories for you</h1>
+              <div class="stories-module__filter filter">
+                <button data-type="all" type="button" class="filter__item filter__item_active">All</button>
+                <button data-type="android" type="button" class="filter__item">Android</button>
+                <button data-type="cricket" type="button" class="filter__item">Cricket</button>
+                <button data-type="iphone" type="button" class="filter__item">iPhone</button>
+                <button data-type="google" type="button" class="filter__item">Google</button>
+                <button data-type="nano-technology" type="button" class="filter__item">Nano Technology</button>
+                <button data-type="mental-health" type="button" class="filter__item">Mental Health</button>
+                <button type="button" class="filter__item filter__item_more _icon-dotts"></button>
+              </div>
+              <div class="stories-module__items">
+                <article class="stories-module__item item item_big">
+                  <div class="item__body">
+                    <h4 class="item__title">
+                      <a href="#" class="item__link-title">Samsung Galaxy F22 launched in India: Price, features, other
+                        details</a>
+                    </h4>
+                    <div class="item__text">Samsung Galaxy F22 has been launched in India. The new smartphone has been
+                      priced in the mid-range segment. The new smartphone is powered by a MediaTek chipset and features
+                      a high refresh rate AMOLED display.</div>
+                  </div>
+                  <a href="#" class="item__image-ibg">
+                    <img src="@img/stories/sumsung-galaxy.jpg" alt="Sumsung Galaxy">
+                  </a>
+                  <div class="item__footer">
+                    <div class="item__info info-item">
+                      <a href="" class="info-item__category">Sport Biz</a>
+                      <div class="info-item__time">42 mins ago</div>
+                    </div>
+                    <div class="item__actions actions-item">
+                      <a href="" class="actions-item__link _icon-share">Share</a>
+                      <a href="" class="actions-item__link _icon-read">Read Later</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="stories-module__item item">
+                  <div class="item__body">
+                    <h4 class="item__title">
+                      <a href="#" class="item__link-title">Battlegrounds Mobile India iOS release date</a>
+                    </h4>
+                    <div class="item__text">The reason behind their disappointment is that iPhone users have been..
+                    </div>
+                  </div>
+                  <a href="#" class="item__image-ibg">
+                    <img src="@img/stories/buttle-mobile.jpg" alt="Sumsung Galaxy">
+                  </a>
+                  <div class="item__footer">
+                    <div class="item__info info-item">
+                      <a href="" class="info-item__category">Sport Biz</a>
+                      <div class="info-item__time">42 mins ago</div>
+                    </div>
+                    <div class="item__actions actions-item">
+                      <a href="" class="actions-item__link _icon-share">Share</a>
+                      <a href="" class="actions-item__link _icon-read">Read Later</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="stories-module__item item">
+                  <div class="item__body">
+                    <h4 class="item__title">
+                      <a href="#" class="item__link-title">Instagram working on ‘Exclusive Stories’ for subscribers</a>
+                    </h4>
+                    <div class="item__text">Instagram could be jumping on the paid subscription..</div>
+                  </div>
+                  <a href="#" class="item__image-ibg">
+                    <img src="@img/stories/instagram.jpg" alt="instagram">
+                  </a>
+                  <div class="item__footer">
+                    <div class="item__info info-item">
+                      <a href="" class="info-item__category">Sport Biz</a>
+                      <div class="info-item__time">42 mins ago</div>
+                    </div>
+                    <div class="item__actions actions-item">
+                      <a href="" class="actions-item__link _icon-share">Share</a>
+                      <a href="" class="actions-item__link _icon-read">Read Later</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="stories-module__item item item_noimage">
+                  <div class="item__body">
+                    <h4 class="item__title">
+                      <a href="#" class="item__link-title">Petrol, diesel prices - July 6: Fuel prices unchanged after
+                        touching record high</a>
+                    </h4>
+                    <div class="item__text">The price of petrol remained unchanged on July 6 after reaching a new record
+                      high on the previous day, according to a price notification by state-owned..</div>
+                  </div>
+                  <div class="item__footer">
+                    <div class="item__info info-item">
+                      <a href="" class="info-item__category">Sport Biz</a>
+                      <div class="info-item__time">42 mins ago</div>
+                    </div>
+                    <div class="item__actions actions-item">
+                      <a href="" class="actions-item__link _icon-share">Share</a>
+                      <a href="" class="actions-item__link _icon-read">Read Later</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="stories-module__item item">
+                  <div class="item__body">
+                    <h4 class="item__title">
+                      <a href="#" class="item__link-title">Android smartphone users alert! Remove these 9 apps now</a>
+                    </h4>
+                    <div class="item__text">Stealer trojans were spread as harmless software..</div>
+                  </div>
+                  <a href="#" class="item__image-ibg">
+                    <img src="@img/stories/android-smart.jpg" alt="android">
+                  </a>
+                  <div class="item__footer">
+                    <div class="item__info info-item">
+                      <a href="" class="info-item__category">Sport Biz</a>
+                      <div class="info-item__time">42 mins ago</div>
+                    </div>
+                    <div class="item__actions actions-item">
+                      <a href="" class="actions-item__link _icon-share">Share</a>
+                      <a href="" class="actions-item__link _icon-read">Read Later</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="stories-module__item item">
+                  <div class="item__body">
+                    <h4 class="item__title">
+                      <a href="#" class="item__link-title">Android smartphone users alert! Remove these 9 apps now</a>
+                    </h4>
+                    <div class="item__text">Stealer trojans were spread as harmless software..</div>
+                  </div>
+                  <a href="#" class="item__image-ibg">
+                    <img src="@img/stories/install-windows.jpg" alt="android">
+                  </a>
+                  <div class="item__footer">
+                    <div class="item__info info-item">
+                      <a href="" class="info-item__category">Sport Biz</a>
+                      <div class="info-item__time">42 mins ago</div>
+                    </div>
+                    <div class="item__actions actions-item">
+                      <a href="" class="actions-item__link _icon-share">Share</a>
+                      <a href="" class="actions-item__link _icon-read">Read Later</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="stories-module__item item">
+                  <div class="item__body">
+                    <h4 class="item__title">
+                      <a href="#" class="item__link-title">This charging feature from Android phones may come to iPhone
+                        13</a>
+                    </h4>
+                    <div class="item__text">Stealer trojans were spread as harmless software..</div>
+                  </div>
+                  <a href="#" class="item__image-ibg">
+                    <img src="@img/stories/android-phones.jpg" alt="android">
+                  </a>
+                  <div class="item__footer">
+                    <div class="item__info info-item">
+                      <a href="" class="info-item__category">Sport Biz</a>
+                      <div class="info-item__time">42 mins ago</div>
+                    </div>
+                    <div class="item__actions actions-item">
+                      <a href="" class="actions-item__link _icon-share">Share</a>
+                      <a href="" class="actions-item__link _icon-read">Read Later</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+            <section class="home__creators creators-module">
+              <div class="creators-module__header">
+                <h2 class="creators-module__title icon-title icon-title_bold _icon-story">Creators you should follow
+                </h2>
+                <div class="creators-module__arrows">
+                  <button type="button"
+                    class="creators-module__arrow creators-module__arrow_left _icon-big-arrow"></button>
+                  <button type="button"
+                    class="creators-module__arrow creators-module__arrow_right _icon-big-arrow"></button>
+                </div>
+              </div>
+              <!-- Оболочка слайдера -->
+              <div class="creators-module__slider swiper">
+                <!-- Двигающееся часть слайдера -->
+                <div class="creators-module__wrapper swiper-wrapper">
+                  <!-- Слайд -->
+                  <div class="creators-module__slide swiper-slide">
+                    <div class="slide-creator">
+                      <div class="slide-creator__body">
+                        <div class="slide-creator__avatar-ibg">
+                          <img src="@img/creators/teylor.jpg" alt="Teylor">
+                        </div>
+                        <div class="slide-creator__title">Shan Teylor</div>
+                        <div class="slide-creator__position">Tech Mint</div>
+                      </div>
+                      <a href="" class="slide-creator__link button button_min">Follow</a>
+                    </div>
+                  </div>
+                  <div class="creators-module__slide swiper-slide">
+                    <div class="slide-creator">
+                      <div class="slide-creator__body">
+                        <div class="slide-creator__avatar-ibg">
+                          <img src="@img/creators/angela.jpg" alt="Angela">
+                        </div>
+                        <div class="slide-creator__title">Mary Angela</div>
+                        <div class="slide-creator__position">Live Mint</div>
+                      </div>
+                      <a href="" class="slide-creator__link button button_min">Follow</a>
+                    </div>
+                  </div>
+                  <div class="creators-module__slide swiper-slide">
+                    <div class="slide-creator">
+                      <div class="slide-creator__body">
+                        <div class="slide-creator__avatar-ibg">
+                          <img src="@img/creators/cho-chi.jpg" alt="Kyon">
+                        </div>
+                        <div class="slide-creator__title">Kyon Cho Chi</div>
+                        <div class="slide-creator__position">Bizz Daily</div>
+                      </div>
+                      <a href="" class="slide-creator__link button button_min">Follow</a>
+                    </div>
+                  </div>
+                  <div class="creators-module__slide swiper-slide">
+                    <div class="slide-creator">
+                      <div class="slide-creator__body">
+                        <div class="slide-creator__avatar-ibg">
+                          <img src="@img/creators/livingstone.jpg" alt="Livingstone">
+                        </div>
+                        <div class="slide-creator__title">Paul Livingstone</div>
+                        <div class="slide-creator__position">Sport Biz</div>
+                      </div>
+                      <a href="" class="slide-creator__link button button_min">Follow</a>
+                    </div>
+                  </div>
+                  <div class="creators-module__slide swiper-slide">
+                    <div class="slide-creator">
+                      <div class="slide-creator__body">
+                        <div class="slide-creator__avatar-ibg">
+                          <img src="@img/creators/jay.jpg" alt="Sara">
+                        </div>
+                        <div class="slide-creator__title">Sara Jay</div>
+                        <div class="slide-creator__position">Sport Biz</div>
+                      </div>
+                      <a href="" class="slide-creator__link button button_min">Follow</a>
+                    </div>
+                  </div>
+                  <div class="creators-module__slide swiper-slide">
+                    <div class="slide-creator">
+                      <div class="slide-creator__body">
+                        <div class="slide-creator__avatar-ibg">
+                          <img src="@img/creators/cho-chi.jpg" alt="Kyon">
+                        </div>
+                        <div class="slide-creator__title">Kyon Cho Chi</div>
+                        <div class="slide-creator__position">Bizz Daily</div>
+                      </div>
+                      <a href="" class="slide-creator__link button button_min">Follow</a>
+                    </div>
+                  </div>
+                  <div class="creators-module__slide swiper-slide">
+                    <div class="slide-creator">
+                      <div class="slide-creator__body">
+                        <div class="slide-creator__avatar-ibg">
+                          <img src="@img/creators/livingstone.jpg" alt="Livingstone">
+                        </div>
+                        <div class="slide-creator__title">Paul Livingstone</div>
+                        <div class="slide-creator__position">Sport Biz</div>
+                      </div>
+                      <a href="" class="slide-creator__link button button_min">Follow</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="home__news news-module news-module_home">
+              <div class="news-module__items">
+                <article class="news-module__item item item_noimage">
+                  <div class="item__body">
+                    <h4 class="item__title">
+                      <a href="#" class="item__link-title">Petrol, diesel prices - July 6: Fuel prices unchanged after
+                        touching record high</a>
+                    </h4>
+                    <div class="item__text">The price of petrol remained unchanged on July 6 after reaching a new record
+                      high on the previous day, according to a price notification by state-owned..</div>
+                  </div>
+                  <div class="item__footer">
+                    <div class="item__info info-item">
+                      <a href="" class="info-item__category">Sport Biz</a>
+                      <div class="info-item__time">42 mins ago</div>
+                    </div>
+                    <div class="item__actions actions-item">
+                      <a href="" class="actions-item__link _icon-share">Share</a>
+                      <a href="" class="actions-item__link _icon-read">Read Later</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="news-module__item item">
+                  <div class="item__body">
+                    <h4 class="item__title">
+                      <a href="#" class="item__link-title">Android smartphone users alert! Remove these 9 apps now</a>
+                    </h4>
+                    <div class="item__text">Stealer trojans were spread as harmless software..</div>
+                  </div>
+                  <a href="#" class="item__image-ibg">
+                    <img src="@img/stories/android-smart.jpg" alt="android">
+                  </a>
+                  <div class="item__footer">
+                    <div class="item__info info-item">
+                      <a href="" class="info-item__category">Sport Biz</a>
+                      <div class="info-item__time">42 mins ago</div>
+                    </div>
+                    <div class="item__actions actions-item">
+                      <a href="" class="actions-item__link _icon-share">Share</a>
+                      <a href="" class="actions-item__link _icon-read">Read Later</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="news-module__item item">
+                  <div class="item__body">
+                    <h4 class="item__title">
+                      <a href="#" class="item__link-title">Android smartphone users alert! Remove these 9 apps now</a>
+                    </h4>
+                    <div class="item__text">Stealer trojans were spread as harmless software..</div>
+                  </div>
+                  <a href="#" class="item__image-ibg">
+                    <img src="@img/stories/install-windows.jpg" alt="android">
+                  </a>
+                  <div class="item__footer">
+                    <div class="item__info info-item">
+                      <a href="" class="info-item__category">Sport Biz</a>
+                      <div class="info-item__time">42 mins ago</div>
+                    </div>
+                    <div class="item__actions actions-item">
+                      <a href="" class="actions-item__link _icon-share">Share</a>
+                      <a href="" class="actions-item__link _icon-read">Read Later</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="news-module__item item">
+                  <div class="item__body">
+                    <h4 class="item__title">
+                      <a href="#" class="item__link-title">This charging feature from Android phones may come to iPhone
+                        13</a>
+                    </h4>
+                    <div class="item__text">Stealer trojans were spread as harmless software..</div>
+                  </div>
+                  <a href="#" class="item__image-ibg">
+                    <img src="@img/stories/android-phones.jpg" alt="android">
+                  </a>
+                  <div class="item__footer">
+                    <div class="item__info info-item">
+                      <a href="" class="info-item__category">Sport Biz</a>
+                      <div class="info-item__time">42 mins ago</div>
+                    </div>
+                    <div class="item__actions actions-item">
+                      <a href="" class="actions-item__link _icon-share">Share</a>
+                      <a href="" class="actions-item__link _icon-read">Read Later</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <button type="button" class="news-module__buttton button button_dark-border">Show More</button>
+            </section>
+          </div>
+        </div>
+        <aside class="page__right-side right-side">
+          <section class="right-side__module weather-module">
+            <!-- <div class="weather-module__title _icon-crosshair">Coimbatore, Tamil Nadu</div>
+            <div class="weather-module__body body-weather-module">
+              <div class="body-weather-module__info" >
+                <h4 class="body-weather-module__status">Sunny</h4>
+                <div class="body-weather-module__value">31<sup>o</sup>c</div>
+              </div>
+              <div class="body-weather-module__icon">
+                <img src="@img/wether/sun.svg" alt="sun">
+              </div>
+            </div>
+            <div class="weather-module__footer">
+              <button type="button" class="weather-module__type weather-module__type_active">Celsius</button>
+              <button type="button" class="weather-module__type">Fahrenheit</button>
+            </div> -->
+          </section>
+          <section class="right-side__module story-writer">
+            <h3 class="story-writer__title icon-title _icon-story">Become a Story Writer</h3>
+            <div class="story-writer__info">Contribute stories and start earning.</div>
+            <button type="button" class="story-writer__button button button_border">Know More</button>
+          </section>
+          <section class="right-side__module quick-bytes">
+            <div class="quick-bytes__header">
+              <h4 class="quick-bytes__title icon-title _icon-doc">Quick Bytes</h4>
+              <div class="quick-bytes__arrows">
+                <button type="button" class="quick-bytes__arrow quick-bytes__arrow_left _icon-slider-arrow"></button>
+                <button type="button" class="quick-bytes__arrow quick-bytes__arrow_right _icon-slider-arrow"></button>
+              </div>
+            </div>
+            <div class="quick-bytes__slider swiper">
+              <div class="quick-bytes__wrapper swiper-wrapper">
+                <div class="quick-bytes__slide swiper-slide">
+                  <p>The price of petrol remained unchanged on July 6 after reaching a new record high on the previous
+                    day, according to a price notification by state-owned fuel retailers. The diesel price remained
+                    stable for the second consecutive day.</p>
+                  <p>The increase on July 5, 35th in two months, took the petrol price in Delhi closer to Rs 100 per
+                    litre-mark. The petrol price in the national capital soared to Rs 99.9 a litre and diesel was priced
+                    at Rs 89.4 per litre, according to Bharat Petroleum's price listing.</p>
+                </div>
+                <div class="quick-bytes__slide swiper-slide">
+                  <p>The price of petrol remained unchanged on July 6 after reaching a new record high on the previous
+                    day, according to a price notification by state-owned fuel retailers. The diesel price remained
+                    stable for the second consecutive day.</p>
+                </div>
+                <div class="quick-bytes__slide swiper-slide">
+                  <p>The price of petrol remained unchanged on July 6 after reaching a new record high on the previous
+                    day, according to a price notification by state-owned fuel retailers. The diesel price remained
+                    stable for the second consecutive day.</p>
+                  <p>The increase on July 5, 35th in two months, took the petrol price in Delhi closer to Rs 100 per
+                    litre-mark. The petrol price in the national capital soared to Rs 99.9 a litre and diesel was priced
+                    at Rs 89.4 per litre, according to Bharat Petroleum's price listing.</p>
+                </div>
+                <div class="quick-bytes__slide swiper-slide">
+                  <p>The price of petrol remained unchanged on July 6 after reaching a new record high on the previous
+                    day, according to a price notification by state-owned fuel retailers. The diesel price remained
+                    stable for the second consecutive day.</p>
+                </div>
+              </div>
+              <div class="quick-bytes__dotts"></div>
+          </section>
+          </section>
+          <section class="right-side__module subscribe-module">
+            <h4 class="subscribe-module__title icon-title">Subscribe to our newsletter</h4>
+            <form action="#" class="subscribe-module__form">
+              <div class="subscribe-module__line">
+                <input autocomplete="off" type="text" name="form[]" data-error="Error (Enter Email)"
+                  data-required="email" placeholder="Enter Email" class="subscribe-module__input">
+              </div>
+              <button type="submit" class="subscribe-module__button button _fw">Subscribe</button>
+            </form>
+          </section>
+        </aside>
+      </aside>
+    </main>
+    @@include('html/_footer.htm',{})
   </div>
+  @@include('html/_js.htm',{})
 </body>
-<style>
-  @charset "UTF-8";
-  @import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-  *,
-  *::before,
-  *::after {
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
-    box-sizing: border-box;
-  }
-
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    min-width: 320px;
-    width: 100%;
-    color: #fff;
-    background-color: #5e5373;
-  }
-
-  body {
-    font-family: Montserrat;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 1rem;
-  }
-
-  a {
-    text-decoration: underline;
-    color: #ebe691
-  }
-
-  a:visited {
-    text-decoration: underline;
-    color: #aaa768;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-
-  ul li {
-    list-style: none;
-  }
-
-  img {
-    vertical-align: top;
-  }
-
-  .wrapper {
-    width: 100%;
-    min-height: 100%;
-    overflow: hidden;
-  }
-
-  .rootpage {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  @media (max-width: 767px) {
-    .rootpage {
-      padding: 30px 15px;
-    }
-  }
-
-  h1 {
-    color: #ebe691;
-    font-size: 2.5rem;
-    margin: 0px 0px 1.25rem 0px;
-  }
-
-  @media (max-width: 767px) {
-    h1 {
-      font-size: 1.85rem;
-      margin: 0px 0px 1.25rem 0px;
-    }
-  }
-
-  h2 {
-    color: #ebe691;
-    font-size: 1.25rem;
-    margin: 0px 0px 1rem 0px;
-  }
-
-  @media (max-width: 767px) {
-    h2 {
-      font-size: 1.125rem;
-      margin: 0px 0px 1rem 0px;
-    }
-  }
-
-  .rootpage__info {
-    line-height: 140%;
-    margin: 0px 0px 1.5rem 0px;
-  }
-
-  .rootpage__list {
-    margin: 0px 0px 2.25rem 1.25rem;
-  }
-
-  .rootpage__list li:not(:last-child) {
-    margin: 0px 0px 15px 0px;
-  }
-
-  .rootpage__contacts,
-  .rootpage__tnx {
-    border-radius: 200px;
-    padding: 20px 65px;
-    line-height: 140%;
-  }
-
-  @media (max-width: 767px) {
-
-    .rootpage__contacts,
-    .rootpage__tnx {
-      border-radius: 40px;
-      padding: 20px;
-    }
-  }
-
-  .rootpage__contacts {
-    background: #32b5a4;
-
-  }
-
-  .rootpage__contacts a {
-    color: #ebe691;
-  }
-
-  .rootpage__tnx {
-    background: #c22d63;
-    margin: 0px 0px 1rem 0px;
-  }
-
-</style>
 
 </html>
